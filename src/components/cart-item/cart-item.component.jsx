@@ -1,5 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+
+import { selectCurrentUser } from "../../redux/user/user.selectors";
 
 import "./cart-item.styles.scss";
 
@@ -15,8 +18,8 @@ const CartItem = ({ item: { imageUrl, price, name, quantity } }) => (
   </div>
 );
 
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser, // user.currentUser Comes from the root reducer
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
 });
 
 const mapDispatchToProps = (dispatch) => ({
