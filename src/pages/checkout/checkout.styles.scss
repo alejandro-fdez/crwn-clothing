@@ -28,4 +28,18 @@
     margin-left: auto;
     font-size: 36px;
   }
+
+  .test-warning {
+    font-size: 1.2em;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: rgb(202, 13, 13);
+
+    .test-title {
+      flex: 1 1 100%;
+      margin-bottom: 0;
+    }
+  }
 }
